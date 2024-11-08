@@ -4,27 +4,27 @@
 [![Coverage Status](https://coveralls.io/repos/github/hagopj13/node-express-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/hagopj13/node-express-boilerplate?branch=master)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-A boilerplate/starter project for quickly building RESTful APIs using Node.js, Express, and Mongoose.
+Một dự án mẫu/khởi đầu để xây dựng nhanh các API RESTful bằng Node.js, Express và Mongoose.
 
-By running a single command, you will get a production-ready Node.js app installed and fully configured on your machine. The app comes with many built-in features, such as authentication using JWT, request validation, unit and integration tests, continuous integration, docker support, API documentation, pagination, etc. For more details, check the features list below.
+Chỉ cần chạy một lệnh, bạn sẽ cài đặt được ứng dụng Node.js sẵn sàng cho sản xuất và cấu hình đầy đủ trên máy của mình. Ứng dụng đi kèm nhiều tính năng tích hợp, chẳng hạn như xác thực bằng JWT, xác thực yêu cầu, kiểm tra đơn vị và tích hợp, tích hợp liên tục, hỗ trợ docker, tài liệu API, phân trang, v.v. Để biết thêm chi tiết, hãy kiểm tra danh sách tính năng bên dưới.
 
 ## Quick Start
 
-To create a project, simply run:
+Để tạo một dự án, bạn chỉ cần chạy:
 
 ```bash
 npx create-nodejs-express-app <project-name>
 ```
 
-Or
+Hoặc
 
 ```bash
 npm init nodejs-express-app <project-name>
 ```
 
-## Manual Installation
+## Cài đặt thủ công
 
-If you would still prefer to do the installation manually, follow these steps:
+Nếu bạn vẫn muốn cài đặt thủ công, hãy làm theo các bước sau:
 
 Clone the repo:
 
@@ -34,13 +34,13 @@ cd node-express-boilerplate
 npx rimraf ./.git
 ```
 
-Install the dependencies:
+Cài đặt các phần phụ thuộc:
 
 ```bash
 yarn install
 ```
 
-Set the environment variables:
+Thiết lập các biến môi trường:
 
 ```bash
 cp .env.example .env
@@ -48,13 +48,13 @@ cp .env.example .env
 # open .env and modify the environment variables (if needed)
 ```
 
-## Table of Contents
+## Mục lục
 
-- [Features](#features)
-- [Commands](#commands)
-- [Environment Variables](#environment-variables)
-- [Project Structure](#project-structure)
-- [API Documentation](#api-documentation)
+- [Tính năng](#features)
+- [Câu lệnh](#commands)
+- [Biến môi trường](#environment-variables)
+- [Cấu trúc dự án](#project-structure)
+- [Tài liệu API](#api-documentation)
 - [Error Handling](#error-handling)
 - [Validation](#validation)
 - [Authentication](#authentication)
@@ -62,25 +62,24 @@ cp .env.example .env
 - [Logging](#logging)
 - [Custom Mongoose Plugins](#custom-mongoose-plugins)
 - [Linting](#linting)
-- [Contributing](#contributing)
 
-## Features
+## Tính năng
 
-- **NoSQL database**: [MongoDB](https://www.mongodb.com) object data modeling using [Mongoose](https://mongoosejs.com)
-- **Authentication and authorization**: using [passport](http://www.passportjs.org)
-- **Validation**: request data validation using [Joi](https://github.com/hapijs/joi)
-- **Logging**: using [winston](https://github.com/winstonjs/winston) and [morgan](https://github.com/expressjs/morgan)
-- **Testing**: unit and integration tests using [Jest](https://jestjs.io)
-- **Error handling**: centralized error handling mechanism
-- **API documentation**: with [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) and [swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)
-- **Process management**: advanced production process management using [PM2](https://pm2.keymetrics.io)
-- **Dependency management**: with [Yarn](https://yarnpkg.com)
-- **Environment variables**: using [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env#readme)
-- **Security**: set security HTTP headers using [helmet](https://helmetjs.github.io)
+- **NoSQL database**: [MongoDB](https://www.mongodb.com) object data modeling sử dụng [Mongoose](https://mongoosejs.com)
+- **Authentication and authorization**: sử dụng [passport](http://www.passportjs.org)
+- **Validation**: yêu cầu xác thực dữ liệu sử dụng [Joi](https://github.com/hapijs/joi)
+- **Logging**: sử dụng [winston](https://github.com/winstonjs/winston) và [morgan](https://github.com/expressjs/morgan)
+- **Testing**: kiểm tra unit và tích hợp sử dụng [Jest](https://jestjs.io)
+- **Error handling**: cơ chế xử lý lỗi tập trung
+- **Tài liệu API**: với [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) và [swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)
+- **Process management**: quản lý tiến trình sử dụng [PM2](https://pm2.keymetrics.io)
+- **Dependency management**: với [Yarn](https://yarnpkg.com)
+- **Biến môi trường**: sử dụng[dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env#readme)
+- **Security**: set security HTTP headers sử dụng [helmet](https://helmetjs.github.io)
 - **Santizing**: sanitize request data against xss and query injection
-- **CORS**: Cross-Origin Resource-Sharing enabled using [cors](https://github.com/expressjs/cors)
+- **CORS**: Cross-Origin Resource-Sharing enabled sử dụng [cors](https://github.com/expressjs/cors)
 - **Compression**: gzip compression with [compression](https://github.com/expressjs/compression)
-- **CI**: continuous integration with [Travis CI](https://travis-ci.org)
+- **CI**: continuous integration with (tích hợp liên tục với) [Travis CI](https://travis-ci.org)
 - **Docker support**
 - **Code coverage**: using [coveralls](https://coveralls.io)
 - **Code quality**: with [Codacy](https://www.codacy.com)
@@ -88,15 +87,15 @@ cp .env.example .env
 - **Linting**: with [ESLint](https://eslint.org) and [Prettier](https://prettier.io)
 - **Editor config**: consistent editor configuration using [EditorConfig](https://editorconfig.org)
 
-## Commands
+## Câu lệnh
 
-Running locally:
+Run dưới môi trường local:
 
 ```bash
 yarn dev
 ```
 
-Running in production:
+Run dưới môi trường production:
 
 ```bash
 yarn start
@@ -144,9 +143,9 @@ yarn prettier
 yarn prettier:fix
 ```
 
-## Environment Variables
+## Biến môi trường
 
-The environment variables can be found and modified in the `.env` file. They come with these default values:
+Các biến môi trường có thể được tìm thấy và sửa đổi trong tệp `.env`. Chúng đi kèm với các giá trị mặc định sau:
 
 ```bash
 # Port number
@@ -158,13 +157,13 @@ MONGODB_URL=mongodb://127.0.0.1:27017/node-boilerplate
 # JWT
 # JWT secret key
 JWT_SECRET=thisisasamplesecret
-# Number of minutes after which an access token expires
+# Số phút sau đó mã thông báo truy cập hết hạn
 JWT_ACCESS_EXPIRATION_MINUTES=30
-# Number of days after which a refresh token expires
+# số ngày sau đó mã thông báo làm mới hết hạn
 JWT_REFRESH_EXPIRATION_DAYS=30
 
 # SMTP configuration options for the email service
-# For testing, you can use a fake SMTP service like Ethereal: https://ethereal.email/create
+# Để thử nghiệm, bạn có thể sử dụng dịch vụ SMTP giả như Ethereal: https://ethereal.email/create
 SMTP_HOST=email-server
 SMTP_PORT=587
 SMTP_USERNAME=email-server-username
@@ -172,7 +171,7 @@ SMTP_PASSWORD=email-server-password
 EMAIL_FROM=support@yourapp.com
 ```
 
-## Project Structure
+## Cấu trúc dự án
 
 ```
 src\
@@ -189,13 +188,13 @@ src\
  |--index.js        # App entry point
 ```
 
-## API Documentation
+## Tài liệu API
 
-To view the list of available APIs and their specifications, run the server and go to `http://localhost:3000/v1/docs` in your browser. This documentation page is automatically generated using the [swagger](https://swagger.io/) definitions written as comments in the route files.
+Để xem danh sách các API khả dụng và thông số kỹ thuật của chúng, hãy chạy máy chủ và truy cập `http://localhost:3000/v1/docs` trong trình duyệt của bạn. Trang tài liệu này được tạo tự động bằng cách sử dụng các định nghĩa [swagger](https://swagger.io/) được viết dưới dạng chú thích trong các tệp tuyến đường.
 
 ### API Endpoints
 
-List of available routes:
+Danh sách các tuyến đường có sẵn:
 
 **Auth routes**:\
 `POST /v1/auth/register` - register\
@@ -215,7 +214,7 @@ List of available routes:
 
 ## Error Handling
 
-The app has a centralized error handling mechanism.
+Ứng dụng này có cơ chế xử lý lỗi tập trung.
 
 Controllers should try to catch the errors and forward them to the error handling middleware (by calling `next(error)`). For convenience, you can also wrap the controller inside the catchAsync utility wrapper, which forwards the error.
 
@@ -228,7 +227,7 @@ const controller = catchAsync(async (req, res) => {
 });
 ```
 
-The error handling middleware sends an error response, which has the following format:
+Phần mềm trung gian xử lý lỗi gửi phản hồi lỗi có định dạng sau:
 
 ```json
 {
@@ -237,11 +236,11 @@ The error handling middleware sends an error response, which has the following f
 }
 ```
 
-When running in development mode, the error response also contains the error stack.
+Khi chạy ở chế độ phát triển, phản hồi lỗi cũng chứa error stack.
 
-The app has a utility ApiError class to which you can attach a response code and a message, and then throw it from anywhere (catchAsync will catch it).
+Ứng dụng này có một lớp tiện ích ApiError mà bạn có thể đính kèm mã phản hồi và thông báo, sau đó gửi nó từ bất kỳ đâu (catchAsync sẽ bắt được nó).
 
-For example, if you are trying to get a user from the DB who is not found, and you want to send a 404 error, the code should look something like:
+Ví dụ, nếu bạn đang cố gắng lấy thông tin người dùng từ DB nhưng không tìm thấy và bạn muốn gửi lỗi 404, mã sẽ trông giống như sau:
 
 ```javascript
 const httpStatus = require('http-status');
@@ -258,7 +257,7 @@ const getUser = async (userId) => {
 
 ## Validation
 
-Request data is validated using [Joi](https://joi.dev/). Check the [documentation](https://joi.dev/api/) for more details on how to write Joi validation schemas.
+Dữ liệu yêu cầu được xác thực bằng [Joi](https://joi.dev/). Kiểm tra [tài liệu](https://joi.dev/api/) để biết thêm chi tiết về cách viết schema xác thực Joi.
 
 The validation schemas are defined in the `src/validations` directory and are used in the routes by providing them as parameters to the `validate` middleware.
 
@@ -275,7 +274,7 @@ router.post('/users', validate(userValidation.createUser), userController.create
 
 ## Authentication
 
-To require authentication for certain routes, you can use the `auth` middleware.
+Để yêu cầu xác thực cho các tuyến đường nhất định, bạn có thể sử dụng phần mềm trung gian `auth`.
 
 ```javascript
 const express = require('express');
@@ -287,23 +286,23 @@ const router = express.Router();
 router.post('/users', auth(), userController.createUser);
 ```
 
-These routes require a valid JWT access token in the Authorization request header using the Bearer schema. If the request does not contain a valid access token, an Unauthorized (401) error is thrown.
+Các tuyến đường này yêu cầu mã thông báo truy cập JWT hợp lệ trong tiêu đề yêu cầu Ủy quyền bằng cách sử dụng Schema Bearer. Nếu yêu cầu không chứa mã thông báo truy cập hợp lệ, lỗi Không được ủy quyền (401) sẽ được đưa ra.
 
-**Generating Access Tokens**:
+**Tạo Access Tokens**:
 
-An access token can be generated by making a successful call to the register (`POST /v1/auth/register`) or login (`POST /v1/auth/login`) endpoints. The response of these endpoints also contains refresh tokens (explained below).
+An access token can be được tạo thành công bằng cách gọi đến regiser (`POST /v1/auth/register`) hoặc login (`POST /v1/auth/login`) endpoints. Phản hồi của các endpoints cũng chứa refresh tokens (giải thích bên dưới).
 
-An access token is valid for 30 minutes. You can modify this expiration time by changing the `JWT_ACCESS_EXPIRATION_MINUTES` environment variable in the .env file.
+Mã thông báo truy cập có hiệu lực trong 30 phút. Bạn có thể sửa đổi thời gian hết hạn này bằng cách thay đổi biến môi trường `JWT_ACCESS_EXPIRATION_MINUTES` trong tệp .env.
 
 **Refreshing Access Tokens**:
 
-After the access token expires, a new access token can be generated, by making a call to the refresh token endpoint (`POST /v1/auth/refresh-tokens`) and sending along a valid refresh token in the request body. This call returns a new access token and a new refresh token.
+Sau khi access token hết hạn, một access token mới có thể được tạo ra, bằng cách gọi đến refresh token endpoint (`POST /v1/auth/refresh-tokens`) và gửi đi một refresh token hợp lệ trong request body. Việc gọi hàm này trả về một access token mới và một refresh token mới.
 
-A refresh token is valid for 30 days. You can modify this expiration time by changing the `JWT_REFRESH_EXPIRATION_DAYS` environment variable in the .env file.
+Mã thông báo làm mới có hiệu lực trong 30 ngày. Bạn có thể sửa đổi thời gian hết hạn này bằng cách thay đổi biến môi trường `JWT_REFRESH_EXPIRATION_DAYS` trong tệp .env.
 
 ## Authorization
 
-The `auth` middleware can also be used to require certain rights/permissions to access a route.
+Phần mềm trung gian `auth` cũng có thể được sử dụng để yêu cầu một số quyền/quyền hạn nhất định để truy cập vào một route.
 
 ```javascript
 const express = require('express');
@@ -317,15 +316,15 @@ router.post('/users', auth('manageUsers'), userController.createUser);
 
 In the example above, an authenticated user can access this route only if that user has the `manageUsers` permission.
 
-The permissions are role-based. You can view the permissions/rights of each role in the `src/config/roles.js` file.
+Quyền được phân theo vai trò. Bạn có thể xem quyền/quyền hạn của từng vai trò trong tệp `src/config/roles.js`.
 
-If the user making the request does not have the required permissions to access this route, a Forbidden (403) error is thrown.
+Nếu người dùng thực hiện yêu cầu không có đủ quyền cần thiết để truy cập tuyến đường này, lỗi Cấm (403) sẽ được đưa ra.
 
 ## Logging
 
-Import the logger from `src/config/logger.js`. It is using the [Winston](https://github.com/winstonjs/winston) logging library.
+Import the logger from `src/config/logger.js`. Sử dụng [Winston](https://github.com/winstonjs/winston) logging library.
 
-Logging should be done according to the following severity levels (ascending order from most important to least important):
+Logging should be done according to the following severity levels (thứ tự tăng dần từ quan trọng nhất đến ít quan trọng nhất):
 
 ```javascript
 const logger = require('<path to src>/config/logger');
